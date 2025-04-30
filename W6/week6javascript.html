@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 6 | JavaScript Lab</title>
+</head>
+<body>
+    <h1>Week 6 JavaScript Lab</h1>
+
+    <script>
+        //Line comment
+
+        /*Multi-line
+        comment*/
+
+        var firstName = "Zachary";
+        var lastName = "Baughan";
+        //String using Concatenation
+        var message = firstName + " " + lastName;
+        console.log(message);
+        //String with literal notation
+        var messageLiteral = `${firstName} ${lastName}`
+        console.log(messageLiteral)
+
+        function outputToPage(tag, msg, color){
+            document.querySelector(tag).innerHTML = msg;
+            document.querySelector(tag).style.color = color;
+        }
+
+        outputToPage("p", messageLiteral, "#0000FF");
+
+        var promptButton = document.querySelector("button");
+
+        // promptButton.addEventListener("click", ()=>{
+        //     outputToPage("p", "Wouldn't you like to be a pepper too?", "#00ff00");
+        //     document.querySelector("p").style.fontFamily = "Arial";
+        // });
+
+        promptButton.addEventListener("click", dataPrompt)
+
+        function dataPrompt(){
+            alert(`My name is ${firstName}, welcome to my program.`);
+            var yourName = prompt("Please tell me your name.");
+            alert(`Hello, ${yourName}, nice to meet you!`);
+            var yourLastName = prompt("Please tell me your last name.");
+            alert(`Your full name is ${yourName} ${yourLastName}.`);
+
+            let firstNumber = prompt("What is your first number?")
+            let secondNumber = prompt("What is your second number?")
+
+            let result = Number(firstNumber) * Number(secondNumber);
+
+            alert(`Your result is ${result}.`);
+
+            //Example of JavaScript creating elements
+            let documentBody = document.querySelector("body");
+            var outputElement = document.createElement("p");
+
+            outputElement.innerHTML = `Your name is ${yourName} ${yourLastName} <br>The result of your numbers is ${result}.<br>Thank you,<br>${firstName} ${lastName}`;
+            documentBody.appendChild(outputElement);
+        }
+    </script>
+
+</body>
+</html>
