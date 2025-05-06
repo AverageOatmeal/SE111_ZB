@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pay Calculator</title>
+    <meta name="author" content="Zachary Baughan">
+    <meta name="description" content="Week 6 Pay Calculator">
+</head>
+<body>
+    <h1>Pay Calculator</h1>
+    <ul>
+        <li><p>Results can be viewed in the Console by right-clicking and selecting "Inspect" followed by "Console."</p></li>
+        <li><p>To use the Pay Calculator again but with different values, reload the page.</p></li>
+    </ul>
+
+
+    <!-- Javascript -->
+    <script>
+        
+        // Gather Info
+        var hourlyPay = Number(prompt("What is your hourly pay?"));
+        var hoursWorked = Number(prompt("How many hours have you worked?"));
+        
+        // Calculate
+        var grossPay = hourlyPay * hoursWorked;
+        var samsShare = grossPay * 0.20;
+        var netPay = grossPay - samsShare
+
+        //Display (alert ver.)
+        alert("Gross Pay: $" + grossPay.toFixed(2) + "\nSam's Share: $" + samsShare.toFixed(2) + "\nNet Pay: $" + netPay.toFixed(2));
+        
+        //Display (console ver.)
+        console.log("Gross Pay: $" + grossPay.toFixed(2))
+        console.log("Sam's Share: $" + samsShare.toFixed(2))
+        console.log("Net Pay: $" + netPay.toFixed(2))
+
+    </script>
+</body>
+</html>
