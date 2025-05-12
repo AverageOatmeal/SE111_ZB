@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 8 | More Objects and Arrays</title>
+</head>
+<body>
+    <h1>More Objects and Arrays</h1>
+
+    <script>
+        var drinks = new Array();
+
+        // Add entries here
+        drinks[0] = "Coffee";
+        drinks[1] = "Energy Drink";
+        drinks[2] = "Fruit Juice";
+        drinks[3] = "Tea";
+        drinks[4] = "Water";
+        drinks[5] = "Soda";
+        drinks[6] = "Lemonade";
+        drinks[7] = "Milk";
+        drinks[8] = "Tequila";
+        drinks[9] = "Whiskey";
+
+        console.log(drinks);
+        console.log(drinks[5]);
+
+        // Push adds items to the Array
+        // drinks.push("Beer");
+        
+        // Pop removes the last item
+        // drinks.pop();
+
+        // Splice removes a range of specific items and reorders them
+        // drinks.splice(3, 1);
+
+        var page = document.querySelector('body');
+
+        for(let i = 0; i < drinks.length; i++){
+            page.innerHTML += `<p>${drinks[i]}</p>`;
+        }
+
+        var drinkTypes = ["Caffeinated Beverage", "Soft Drink", "Juice", "Caffeinated Beverage", "Water", "Soft Drink", "Soft Drink", "Milk", "Hard Liquor", "Hard Liquor"];
+
+        for(let i = 0; i < drinks.length; i++){
+            console.log(`Drink: ${drinks[i]}, Drink Type: ${drinkTypes[i]}`);
+        }
+    </script>
+</body>
+</html>
